@@ -5,7 +5,6 @@ import { defineConfig } from 'vitest/config';
 const root = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  esbuild: { jsx: 'automatic' },
   resolve: { alias: { '@': root } },
   test: {
     environment: 'jsdom',
