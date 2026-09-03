@@ -28,7 +28,7 @@ export function EpisodeList() {
           </summary>
           <div className="episode__body">
             <dl className="kv kv--danger">
-              <dt>Цена</dt>
+              <dt>Последствие</dt>
               <dd>{episode.consequence}</dd>
             </dl>
             <dl className="kv">

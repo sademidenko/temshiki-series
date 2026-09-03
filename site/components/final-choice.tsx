@@ -21,7 +21,8 @@ export function FinalChoice() {
         <h4>{finalChoice.outcome}</h4>
         <p>{finalChoice.outcomeText}</p>
       </div>
-      <p className="choice__epilogue">{finalChoice.epilogue}</p>
+      <p className="choice__key" style={{ marginTop: "1.5rem" }}>Эпилог</p>
+      <p className="choice__epilogue" style={{ marginTop: "0.5rem" }}>{finalChoice.epilogue}</p>
     </div>
   );
 }

@@ -108,13 +108,14 @@ export default function Home() {
           <EpisodeList />
           <h3 className="sub">Финальный выбор</h3>
           <FinalChoice />
-          <blockquote className="quote reveal" style={{ marginTop: '3rem' }}>
+          <h3 className="sub">Сезон одной фразой</h3>
+          <blockquote className="quote reveal">
             {seasonArc}
           </blockquote>
         </section>
 
         <section className="section">
-          <SectionHead id="world" title="Где происходит действие" lead={tone} />
+          <SectionHead id="world" title="Тон и место действия" lead={tone} />
           <div className="grid">
             {world.map((place) => (
               <article key={place.title} className="card reveal">
@@ -145,7 +146,7 @@ export default function Home() {
           <SectionHead
             id="references"
             title="Похожие сериалы"
-            lead="Что каждый из них даёт проекту. Отличие «ТЕМЩИКОВ»: четверо друзей из компьютерной игры и пустое пятое место, мелкие схемы, которые вырастают в площадку, и государство, которое забирает себе их дружбу."
+            lead="Что каждый из них даёт проекту. В «Мистере Роботе» одиночка взламывает корпорацию, здесь четверо не взламывают ничего: они придумывают людей. В «Как продавать наркотики онлайн» подростки обыгрывают взрослых, здесь взрослые с самого начала ведут их за руку."
           />
           <ul className="refs">
             {references.map((reference) => (

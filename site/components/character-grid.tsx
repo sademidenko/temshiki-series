@@ -16,12 +16,10 @@ export function CharacterGrid() {
             </span>
             {death ? (
               <span className="card__death">
-                <span className="sr-only">Погибает: </span>† {death}
+                погибает · {death}
               </span>
             ) : null}
-            <p className="card__meta">
-              {character.role} · {character.city}
-            </p>
+            <p className="card__meta">{character.city}</p>
             <h3 className="card__name">{character.name}</h3>
             <dl>
               <dt>В игре</dt>
