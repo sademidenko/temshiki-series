@@ -46,7 +46,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <h3 className="sub">Двигатель каждой серии</h3>
+          <h3 className="sub">Как устроена каждая серия</h3>
           <ol className="engine">
             {episodeEngine.map((stage) => (
               <li key={stage}>{stage}</li>
@@ -58,7 +58,7 @@ export default function Home() {
           <SectionHead
             id="team"
             title="Команда из четырёх"
-            lead="Dota здесь не декорация, а язык близости и власти. Роли объясняют, зачем друзья нужны друг другу, а вечерний матч, который четвёрка играет в каждой серии, показывает то, о чём они уже не могут говорить вслух."
+            lead="Dota здесь нужна не для красоты. Роли в игре показывают, зачем друзья нужны друг другу, а короткая сцена в игре в каждой серии показывает, как меняется их дружба."
           />
           <CharacterGrid />
           <h3 className="sub">Кто на самом деле главный</h3>
@@ -83,11 +83,11 @@ export default function Home() {
         <section id="evolution" className="section">
           <SectionHead
             id="evolution"
-            title="Эволюция «ТЕМЫ»"
-            lead="Сезон не каталог афер, а одна операция длиной в девять лет. Каждая победа оставляет необратимый актив и новый долг перед Рудиным, пока площадка не перестаёт нуждаться в своих создателях."
+            title="Как росла «ТЕМА»"
+            lead="Это не набор отдельных афер. Каждая победа оставляет что-то, что нельзя вернуть, и новый долг перед Рудиным. В конце площадка работает уже без своих создателей."
           />
           <EvolutionTimeline />
-          <h3 className="sub">Человеческая цена системы</h3>
+          <h3 className="sub">Кто пострадал</h3>
           <div className="grid">
             {supportingCast.map(({ name, role, detail }) => (
               <article key={name} className="card reveal">
@@ -103,10 +103,10 @@ export default function Home() {
           <SectionHead
             id="episodes"
             title="Восемь серий"
-            lead="Каждая серия — один необратимый выбор Антона. Восемь выборов складываются в лестницу от общей кассы до предательства. Подробности открываются по нажатию, первая серия уже открыта."
+            lead="В каждой серии Антон делает один выбор, который нельзя отменить. Восемь таких выборов ведут от общей кассы к предательству. Подробности открываются по нажатию, первая серия уже открыта."
           />
           <EpisodeList />
-          <h3 className="sub">Финальная транзакция</h3>
+          <h3 className="sub">Финальный выбор</h3>
           <FinalChoice />
           <blockquote className="quote reveal" style={{ marginTop: '3rem' }}>
             {seasonArc}
@@ -114,7 +114,7 @@ export default function Home() {
         </section>
 
         <section className="section">
-          <SectionHead id="world" title="Мир и тон" lead={tone} />
+          <SectionHead id="world" title="Где происходит действие" lead={tone} />
           <div className="grid">
             {world.map((place) => (
               <article key={place.title} className="card reveal">
@@ -128,8 +128,8 @@ export default function Home() {
         <section className="section">
           <SectionHead
             id="production"
-            title="Производственный потенциал"
-            lead="Сериал снимается в помещениях, а растёт на экранах."
+            title="Как это снимать"
+            lead="Дорогих сцен три. Остальное снимается в помещениях."
           />
           <div className="grid">
             {production.map((block) => (
@@ -144,8 +144,8 @@ export default function Home() {
         <section className="section">
           <SectionHead
             id="references"
-            title="Референсное поле"
-            lead="Здесь только названия и то, что каждый референс даёт проекту. Своё у «ТЕМЩИКОВ» другое: российская Dota-четвёрка с пустым пятым местом, темки, которые вырастают в платформу, и государство, которое присваивает дружбу."
+            title="Похожие сериалы"
+            lead="Что каждый из них даёт проекту. Отличие «ТЕМЩИКОВ»: четверо друзей из компьютерной игры и пустое пятое место, мелкие схемы, которые вырастают в площадку, и государство, которое забирает себе их дружбу."
           />
           <ul className="refs">
             {references.map((reference) => (
@@ -155,7 +155,7 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <h3 className="sub">Бренды, права и вымышленные замены</h3>
+          <h3 className="sub">Права и вымышленные названия</h3>
           <div className="prose" style={{ display: 'grid', gap: '0.75rem' }}>
             {clearance.map((paragraph) => (
               <p key={paragraph} className="muted" style={{ fontSize: '0.88rem' }}>

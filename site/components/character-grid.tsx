@@ -24,11 +24,13 @@ export function CharacterGrid() {
             </p>
             <h3 className="card__name">{character.name}</h3>
             <dl>
-              <dt>Функция</dt>
+              <dt>В игре</dt>
+              <dd>{character.game}</dd>
+              <dt>Что делает</dt>
               <dd>{character.function}</dd>
-              <dt>Желание</dt>
+              <dt>Чего хочет</dt>
               <dd>{character.desire}</dd>
-              <dt>Изъян</dt>
+              <dt>Слабость</dt>
               <dd>{character.flaw}</dd>
             </dl>
           </li>

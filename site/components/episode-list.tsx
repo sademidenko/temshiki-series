@@ -32,7 +32,7 @@ export function EpisodeList() {
               <dd>{episode.consequence}</dd>
             </dl>
             <dl className="kv">
-              <dt>Матч серии</dt>
+              <dt>Сцена в игре</dt>
               <dd>{matchLog[index]}</dd>
             </dl>
             <p className="episode__summary">{episode.summary}</p>

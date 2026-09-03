@@ -1,7 +1,7 @@
 export const sections = [
   { id: 'idea', num: '01', label: 'Идея' },
   { id: 'team', num: '02', label: 'Команда' },
-  { id: 'evolution', num: '03', label: 'Эволюция' },
+  { id: 'evolution', num: '03', label: 'Рост «ТЕМЫ»' },
   { id: 'episodes', num: '04', label: 'Восемь серий' },
   { id: 'materials', num: '05', label: 'Материалы' },
 ] as const;
