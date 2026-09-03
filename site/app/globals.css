@@ -250,6 +250,10 @@ p {
   display: inline-flex;
   align-items: center;
 }
+.nav__inner > nav {
+  flex: 1 1 auto;
+  min-width: 0;
+}
 .nav__list {
   display: flex;
   gap: 0.25rem;
@@ -259,6 +263,7 @@ p {
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
 }
 .nav__list::-webkit-scrollbar {
   display: none;
@@ -279,6 +284,10 @@ p {
 }
 .nav__link:hover {
   background: var(--accent-soft);
+}
+.nav__link:focus-visible,
+.nav__brand:focus-visible {
+  outline-offset: -3px;
 }
 .nav__num {
   color: var(--accent-strong);
