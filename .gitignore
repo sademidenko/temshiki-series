@@ -1,0 +1,5 @@
+# local working material that must not be published
+tmp/
+reviews_30/
+*.zip
+.DS_Store
