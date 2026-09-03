@@ -28,7 +28,9 @@ jobs:
           cache: npm
           cache-dependency-path: site/package-lock.json
       - uses: actions/configure-pages@v5
-      - run: npm ci
+      # npm ci rejects the macOS-generated lockfile on Linux because of optional
+      # wasm fallbacks (@emnapi/*); npm install resolves them from the lockfile.
+      - run: npm install --no-audit --no-fund
       - run: npm test
       - run: npm run build:pages
       - run: npm run verify:pages
