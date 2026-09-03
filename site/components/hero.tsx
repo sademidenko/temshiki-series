@@ -34,7 +34,7 @@ export function Hero({ meta }: { meta: SeriesMeta }) {
           <a
             className="btn"
             href="./materials/temshchiki-season-1-v2.md"
-            download="ТЕМЩИКИ_ЗАЯВКА_СЕЗОН_1_V2.md"
+            download
           >
             Скачать заявку
           </a>

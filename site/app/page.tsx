@@ -15,6 +15,7 @@ import {
   references,
   seasonArc,
   seriesMeta,
+  shortPitch,
   supportingCast,
   tagline,
   tone,
@@ -30,11 +31,17 @@ export default function Home() {
         <Hero meta={seriesMeta} />
 
         <section id="idea" className="section">
-          <SectionHead id="idea" title="High concept" lead={tagline} />
+          <SectionHead id="idea" title="Идея" lead={tagline} />
+          <div className="story">
+            {shortPitch.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+          <h3 className="sub">О чём это на самом деле</h3>
           <div className="grid">
             {highConcept.map((block) => (
               <article key={block.title} className="card reveal">
-                <h3 className="card__name">{block.title}</h3>
+                <h4 className="card__name">{block.title}</h4>
                 <p style={{ fontSize: '0.9rem' }}>{block.text}</p>
               </article>
             ))}
@@ -51,10 +58,10 @@ export default function Home() {
           <SectionHead
             id="team"
             title="Команда из четырёх"
-            lead="Dota здесь — язык близости и власти: роли объясняют, почему друзья нужны друг другу. Постоянного пятого у них никогда не было."
+            lead="Dota здесь не декорация, а язык близости и власти. Роли объясняют, зачем друзья нужны друг другу, а вечерний матч, который четвёрка играет в каждой серии, показывает то, о чём они уже не могут говорить вслух."
           />
           <CharacterGrid />
-          <h3 className="sub">Кто управляет картой</h3>
+          <h3 className="sub">Кто на самом деле главный</h3>
           <div className="triangle">
             {powerTriangle.map((node, index) => (
               <Fragment key={node.name}>
@@ -71,6 +78,15 @@ export default function Home() {
               </Fragment>
             ))}
           </div>
+        </section>
+
+        <section id="evolution" className="section">
+          <SectionHead
+            id="evolution"
+            title="Эволюция «ТЕМЫ»"
+            lead="Сезон не каталог афер, а одна операция длиной в девять лет. Каждая победа оставляет необратимый актив и новый долг перед Рудиным, пока площадка не перестаёт нуждаться в своих создателях."
+          />
+          <EvolutionTimeline />
           <h3 className="sub">Человеческая цена системы</h3>
           <div className="grid">
             {supportingCast.map(({ name, role, detail }) => (
@@ -83,20 +99,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="evolution" className="section">
-          <SectionHead
-            id="evolution"
-            title="Эволюция «ТЕМЫ»"
-            lead="Сезон — не каталог афер, а одна операция длиной в девять лет. Каждая победа оставляет необратимый актив и новый долг перед Рудиным, пока площадка не перестаёт нуждаться в своих создателях."
-          />
-          <EvolutionTimeline />
-        </section>
-
         <section id="episodes" className="section">
           <SectionHead
             id="episodes"
             title="Восемь серий"
-            lead="Год, название, необратимый выбор Антона. Подробности каждой серии раскрываются по нажатию; первая открыта."
+            lead="Каждая серия — один необратимый выбор Антона. Восемь выборов складываются в лестницу от общей кассы до предательства. Подробности открываются по нажатию, первая серия уже открыта."
           />
           <EpisodeList />
           <h3 className="sub">Финальная транзакция</h3>
@@ -106,7 +113,7 @@ export default function Home() {
           </blockquote>
         </section>
 
-        <section className="section" aria-labelledby="world-title">
+        <section className="section">
           <SectionHead id="world" title="Мир и тон" lead={tone} />
           <div className="grid">
             {world.map((place) => (
@@ -122,7 +129,7 @@ export default function Home() {
           <SectionHead
             id="production"
             title="Производственный потенциал"
-            lead="Масштаб создаётся последствиями, а не декорациями: растущими помещениями, числом операторов, новостями и интерфейсами."
+            lead="Сериал снимается в помещениях, а растёт на экранах."
           />
           <div className="grid">
             {production.map((block) => (
@@ -138,7 +145,7 @@ export default function Home() {
           <SectionHead
             id="references"
             title="Референсное поле"
-            lead="Только названия и функция каждого референса. Уникальный центр проекта — российская Dota-четвёрка, пустое пятое место, эволюция «темок» в платформу и государственное присвоение дружбы."
+            lead="Здесь только названия и то, что каждый референс даёт проекту. Своё у «ТЕМЩИКОВ» другое: российская Dota-четвёрка с пустым пятым местом, темки, которые вырастают в платформу, и государство, которое присваивает дружбу."
           />
           <ul className="refs">
             {references.map((reference) => (
@@ -162,7 +169,7 @@ export default function Home() {
           <SectionHead
             id="materials"
             title="Материалы"
-            lead="Три документа для внутреннего обсуждения. Скачиваются напрямую, без регистрации."
+            lead="Три рабочих документа. Скачиваются напрямую, без регистрации."
           />
           <Materials />
         </section>
@@ -175,7 +182,9 @@ export default function Home() {
         <p className="prose">{seriesMeta.logline}</p>
         <p>
           Рабочее название. Продюсерская заявка, версия 2. Все персонажи,
-          компании и площадки внутри операций вымышлены.
+          букмекер, площадка «ТЕМА», программа «Контур» и компании внутри
+          операций вымышлены; реальные игра, производитель ускорителей и вузы
+          упомянуты как культурная фактура и требуют согласования прав.
         </p>
       </footer>
     </>
