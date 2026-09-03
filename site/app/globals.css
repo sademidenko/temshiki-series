@@ -361,9 +361,18 @@ p {
 .hero__title {
   font-size: clamp(2.75rem, 11vw, 9rem);
   letter-spacing: 0.02em;
-  color: var(--accent);
+  color: var(--accent-strong);
   margin: 0;
-  text-shadow: 0 0 40px rgba(1, 255, 240, 0.35);
+  width: fit-content;
+}
+.hero__title-mark {
+  display: inline;
+  background: var(--accent-strong);
+  color: var(--over-accent);
+  padding: 0 0.12em 0 0.06em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  box-shadow: 0 0 48px rgba(251, 233, 83, 0.28);
 }
 .cursor::after {
   content: '_';

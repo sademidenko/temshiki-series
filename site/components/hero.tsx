@@ -18,7 +18,7 @@ export function Hero({ meta }: { meta: SeriesMeta }) {
           Продюсерская заявка · мини-сериал · рабочее название
         </p>
         <h1 id="hero-title" className="display hero__title cursor">
-          {meta.title}
+          <span className="hero__title-mark">{meta.title}</span>
         </h1>
         <p className="hero__formula">{meta.formula}</p>
         <p className="hero__logline">{meta.logline}</p>
