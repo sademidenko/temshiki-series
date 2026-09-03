@@ -12,7 +12,9 @@
     "lint": "oxlint",
     "format": "oxfmt",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "build:pages": "PAGES_BASE_PATH=/temshiki-series vinext build && node scripts/prepare-pages.mjs",
+    "verify:pages": "STATIC_OUTPUT=dist/client node scripts/verify-static-build.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
